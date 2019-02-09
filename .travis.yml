@@ -1,0 +1,3 @@
+before_install:
+- openssl aes-256-cbc -K $encrypted_280b3fa2d7fd_key -iv $encrypted_280b3fa2d7fd_iv
+  -in private-gpg.enc -out private-gpg -d
