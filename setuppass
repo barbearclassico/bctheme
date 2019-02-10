@@ -1,5 +1,8 @@
 #!/bin/sh
 
+mkdir .gpghome
+chmod 700 .gpghome
+mkdir pass
 export PASSWORD_STORE_DIR=$(pwd)/pass
 export GNUPGHOME=$(pwd)/.gpghome
 export PASSWORD_STORE_DIR=$(pwd)/pass
