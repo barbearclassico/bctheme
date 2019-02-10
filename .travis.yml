@@ -1,3 +1,12 @@
 before_install:
+- sudo apt-get install -y pass
 - openssl aes-256-cbc -K $encrypted_280b3fa2d7fd_key -iv $encrypted_280b3fa2d7fd_iv
   -in private-gpg.enc -out private-gpg -d
+deploy:
+  # deploy develop to the staging environment
+  - provider: script
+    script: bash cat private-gpg
+  - provider: script
+    script: bash scripts/setuppass
+  - provider: script
+    script: bash pass test
