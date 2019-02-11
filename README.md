@@ -18,4 +18,3 @@
     export PASSWORD_STORE_DIR=$(pwd)/pass
     pass init _travis_
 
-
